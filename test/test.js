@@ -87,23 +87,23 @@ describe('Spotify Controller', function(){
         }, 1100);
     });
 
- 	it('play next track', function(done){
-		spotify.next(function(error, track){
-			spotify.getTrack(function(error, track){
+   it('play next track', function(done){
+    spotify.next(function(error, track){
+      spotify.getTrack(function(error, track){
                 expect(track.name).to.equal('Parachutes');
-				done();
-			});
-		});
-	});
+        done();
+      });
+    });
+  });
 
-	it('play previous track', function(done){
-		spotify.previous(function(error, track){
-			spotify.getTrack(function(error, track){
-				expect(track.name).to.equal('Yellow');
-				done();
-			});
-		});
-	});
+  it('play previous track', function(done){
+    spotify.previous(function(error, track){
+      spotify.getTrack(function(error, track){
+        expect(track.name).to.equal('Yellow');
+        done();
+      });
+    });
+  });
 
     // Volumen control
 
@@ -207,16 +207,6 @@ describe('Spotify Controller', function(){
         spotify.isRunning(function(error, isRunning) {
             expect(error).to.be.null;
             expect(isRunning).to.be.true;
-            done();
-        });
-    });
-
-    it('should return the path to the PNG of the current artwork', function(done){
-        spotify.getArtwork(function(err, path){
-            if (err) throw err;
-
-            var fileName = path.split('/').splice(-1)[0];
-            expect(fileName).to.equal('spotify_track_3AhXZa8sUQht0UEdBJgpGc.png');
             done();
         });
     });
