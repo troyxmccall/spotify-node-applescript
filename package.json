@@ -1,6 +1,6 @@
 {
   "name": "spotify-node-applescript",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Control Spotify on Mac OSX with NodeJS and AppleScript.",
   "keywords": [
     "spotify",
@@ -19,7 +19,8 @@
   },
   "main": "./lib/spotify-node-applescript.js",
   "dependencies": {
-    "applescript": "1.0.0"
+    "applescript": "1.0.0",
+    "spotify-web-api-node": "^2.2.0"
   },
   "devDependencies": {
     "chai": "2.3.x",
